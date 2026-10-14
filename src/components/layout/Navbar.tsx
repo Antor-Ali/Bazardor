@@ -1,6 +1,6 @@
 
 "use client";
-
+import AuthStatus from "@/components/layout/AuthStatus";
 import { useState } from "react";
 import Link from "next/link";
 import { Menu, ShoppingBasket, X } from "lucide-react";
@@ -44,19 +44,9 @@ export default function Navbar() {
 
           {/* Desktop authentication */}
           <div className="hidden items-center gap-3 md:flex">
-            <Link
-              href="/signin"
-              className="rounded-lg px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-gray-100"
-            >
-              সাইন ইন
-            </Link>
-
-            <Link
-              href="/signup"
-              className="rounded-lg bg-[#078342] px-4 py-2 text-sm font-semibold text-white hover:bg-[#056b35]"
-            >
-              সাইন আপ
-            </Link>
+           <div className="hidden items-center gap-3 md:flex">
+  <AuthStatus />
+</div>
           </div>
 
           {/* Mobile menu button */}
